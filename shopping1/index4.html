@@ -3,66 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Medicine Shop</title>
+    <title>Medicine Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Professional Medicine Shop</h1>
-        <h1>Deliver in 30minutes</h1>
+        <h1>Online Medicine Store</h1>
+        <input type="text" id="searchBar" placeholder="Search for medicine...">
+        <div id="cart-summary">
+            <p>Cart: <span id="cart-count">0</span> items</p>
+            <p>Total: ₹<span id="total-price">0</span></p>
+        </div>
     </header>
 
     <main>
-        <section class="products">
-            <h2>Available Medicines</h2>
-            <!-- Medicine Block 1 -->
-            <div class="product" data-price="150">
-                <img src="New Folder/Paracetamol.jpeg" alt="Paracetamol">
-                <h3>Paracetamol</h3>
-                <p><strong>Price:</strong> ₹150</p>
-                <p><strong>Type:</strong> Fever</p>
-                <p><strong>Directions:</strong> Take one tablet every 4-6 hours as needed. Do not exceed 4 tablets in 24 hours.</p>
-                <button onclick="addToCart('Paracetamol', 150)">Add to Cart</button>
-            </div>
-            <!-- Medicine Block 2 -->
-            <div class="product" data-price="200">
-                <img src="New Folder/Ibuprofen.jpeg" alt="Ibuprofen">
-                <h3>Ibuprofen</h3>
-                <p><strong>Price:</strong> ₹200</p>
-                <p><strong>Type:</strong> Fever, Pain</p>
-                <p><strong>Directions:</strong> Take one tablet every 6-8 hours as needed. Do not exceed 3 tablets in 24 hours.</p>
-                <button onclick="addToCart('Ibuprofen', 200)">Add to Cart</button>
-            </div>
-            <!-- Medicine Block 3 -->
-            <div class="product" data-price="180">
-                <img src="New Folder/Cough Syrup.jpeg" alt="Cough Syrup">
-                <h3>Cough Syrup</h3>
-                <p><strong>Price:</strong> ₹180</p>
-                <p><strong>Type:</strong> Cough</p>
-                <p><strong>Directions:</strong> Take 10ml every 6-8 hours as needed.</p>
-                <button onclick="addToCart('Cough Syrup', 180)">Add to Cart</button>
-            </div>
-            <!-- Medicine Block 4 -->
-            <div class="product" data-price="220">
-                <img src="images/cold_tablets.jpg" alt="Cold Tablets">
-                <h3>Cold Tablets</h3>
-                <p><strong>Price:</strong> ₹220</p>
-                <p><strong>Type:</strong> Cold</p>
-                <p><strong>Directions:</strong> Take one tablet every 6 hours as needed.</p>
-                <button onclick="addToCart('Cold Tablets', 220)">Add to Cart</button>
-            </div>
-            <!-- Add additional medicine blocks here, following the same structure -->
-        </section>
-
-        <section class="cart">
-            <h2>Your Cart</h2>
-            <ul id="cart-items">
-                <!-- Cart items will be dynamically inserted here -->
-            </ul>
-            <p>Total Price: ₹<span id="total-price">0</span></p>
-            <button id="checkout-button">Checkout</button>
-        </section>
+        <div class="medicine-container" id="medicineContainer">
+            <!-- Medicines will be dynamically loaded here -->
+        </div>
     </main>
+
+    <footer>
+        <h3>Checkout</h3>
+        <p>Total Price: ₹<span id="checkout-total">0</span></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
